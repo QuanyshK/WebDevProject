@@ -1,0 +1,36 @@
+*:focus {
+  outline: none;
+}
+.search_bar{
+  border:#444444 1.5px solid;
+  margin-left: 100px;
+  border-radius: 25px;
+  width: 1000px;
+  height: 47px;
+  background-color: #444444;
+}
+
+.search_bar:hover {
+  border: #565656 1.5px solid;
+}
+
+.search_bar:focus-within {
+  border: #FFFFFF 1.5px solid;
+}
+
+.inputbar:focus-within{
+  color: #FFFFFF;
+}
+
+.inputbar{
+  position: fixed;
+  margin-left: 20px;
+  margin-top: 4.5px;
+  font-size: 30px;
+  color: #676767;
+  height: 34px;
+  width: 960px;
+  border: none;
+  background-color:transparent;
+
+}
