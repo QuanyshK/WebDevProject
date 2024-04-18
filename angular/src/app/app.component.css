@@ -1,0 +1,80 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.text{
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body{
+  margin:0;
+  padding:0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(-45deg, #80A5D0, #1E245A);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+.mainbox{
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 28px);
+  height: calc(100vh - 28px);
+  margin-top: 14px;
+  margin-left: 14px;
+
+  background: #1F1F1F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+}
+
+.tabbox{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 174px;
+  margin-top: 40px;
+  width: 1140px;
+  height: 630px;
+  overflow: scroll;
+}
+
+.testing2{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+
+.footerbox{
+  display: flex;
+  flex-direction: row;
+  margin-left: 155px;
+  width: 1160px;
+  height: 90px;
+  background-color: black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
