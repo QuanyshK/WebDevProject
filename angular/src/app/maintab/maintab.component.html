@@ -1,0 +1,44 @@
+ <div class="subcategory_box">
+   <span class="text subcategory_title">Music for you</span>
+   <span class="text expand">Show more</span>
+ </div>
+
+<div class="mlist_box">
+
+  <div class="mbox" *ngFor="let asset of assets.slice(0,5)" (click)="changeTrack(asset)">
+    <img class="mimage" src = "{{asset.img}}">
+    <span class="text mname">{{asset.name}}</span>
+    <div class="fader fader-left"></div>
+    <div class="fader fader-right"></div> <br>
+    <span class="text mauth">{{asset.author}}</span>
+  </div>
+</div>
+
+<span class="text subcategory_title">Listen again</span>
+
+ <div class="mlist_box">
+
+   <div class="mbox" *ngFor="let asset of assets.slice(5,8)" (click)="changeTrack(asset)">
+     <img class="mimage" src = "{{asset.img}}">
+     <span class="text mname">{{asset.name}}</span>
+     <div class="fader fader-left"></div>
+     <div class="fader fader-right"></div> <br>
+     <span class="text mauth">{{asset.author}}</span>
+   </div>
+ </div>
+
+ <div class="subcategory_box">
+   <span class="text subcategory_title">Your favourites</span>
+   <span class="text expand">Show more</span>
+ </div>
+
+ <div class="mlist_box">
+
+   <div class="mbox" *ngFor="let asset of assets.slice(0,5)" (click)="changeTrack(asset)">
+     <img class="mimage" src = "{{asset.img}}">
+     <span class="text mname">{{asset.name}}</span>
+     <div class="fader fader-left"></div>
+     <div class="fader fader-right"></div> <br>
+     <span class="text mauth">{{asset.author}}</span>
+   </div>
+ </div>

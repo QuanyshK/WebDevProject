@@ -1,0 +1,9 @@
+<div class = "selecttab">
+  <button [ngClass]="{'activebuttonmain': whichTab=='main', 'maintab': whichTab!='main'}" (click)="tomain()" class="maintab">
+
+  </button>
+
+  <button [ngClass]="{'activebuttonsearch': whichTab=='search', 'searchtab': whichTab!='search'}"  (click)="tosearch()" class="searchtab">
+
+  </button>
+</div>

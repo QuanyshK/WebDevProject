@@ -1,0 +1,15 @@
+<div class="footerbox" *ngIf="ifExists(currentId)">
+  {{changeTrack(currentId)}}
+  <img class="imgbox" src="{{currentImg(currentId)}}">
+  <span class="text nameauth_ft">
+    <span class="mname_ft"> {{currentName(currentId)}}</span> <br>
+    <span class="mauth_ft">{{currentAuth(currentId)}} </span>
+  </span>
+  <div>
+    <ngx-audio-player class="playbox"  [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle"
+                      muted="muted" [displayPlaylist]="msaapDisplayPlayList" [pageSizeOptions]="msaapPageSizeOptions"
+                      [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+                      [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+                      [displayDuration]="msaapDisplayDuration" [expanded]="true" [autoPlay]="true"></ngx-audio-player>
+  </div>
+</div>
