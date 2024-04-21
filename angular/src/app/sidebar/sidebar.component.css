@@ -62,6 +62,7 @@ input[type="button"] {
   border-radius: 10px;
   margin-bottom: 32px;
   box-shadow: none;
+  color: rgb(224, 224, 224);
 }
 
 .searchtab{
@@ -73,5 +74,6 @@ input[type="button"] {
   background: #93CAF1;
   border-radius: 10px;
   box-shadow: none;
+  color: rgb(224, 224, 224);
 
 }

@@ -8,6 +8,15 @@
   width: 1000px;
   height: 47px;
   background-color: #444444;
+  margin-bottom: 10px;
+}
+.list_music{
+  display: flex;
+  margin-top: -2px;
+  margin-left: 15px;
+  height: 280px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .search_bar:hover {
@@ -33,4 +42,65 @@
   border: none;
   background-color:transparent;
 
+}
+.sbox{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 200px;
+  justify-content: center;
+  text-align: center;
+  height: 270px;
+  border-radius: 5.5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: -15px;
+  margin-right: 30px;
+  flex-grow: 0;
+  word-wrap: break-word;
+
+}
+
+.sbox:hover{
+  background-color: #363636FF;
+}
+
+.simage{
+  margin-top: 8px;
+  border-radius: 10px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.sname{
+  font-weight: 300;
+  margin-top: -7px;
+  font-size: 21px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFFFFF;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.sauth{
+  width: 149px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: -14px;
+  line-height: 25px;
+  text-align: center;
+  color: rgb(138, 138, 138);
+}
+
+.sauth:hover{
+  text-decoration: underline;
+  user-select: none;
 }

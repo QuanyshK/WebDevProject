@@ -12,4 +12,7 @@ export class DataService {
   getAlbums(){
     return this.http.get<Songs[]>(`http://127.0.0.1:8000/songinfo/`)
   }
+  getAlbumsbyId(id:number):Observable<Songs>{
+    return this.http.get<Songs>(`http://127.0.0.1:8000/songinfo/${id}/`);
+  }
 }

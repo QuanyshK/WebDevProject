@@ -10,3 +10,7 @@ from rest_framework import generics
 class songinfo(generics.ListCreateAPIView):
     serializer_class = SongInfoSerializer
     queryset = SongInfo.objects.all()
+
+class songUpdateRetriveDelete(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = SongInfoSerializer
+    queryset = SongInfo.objects.all()

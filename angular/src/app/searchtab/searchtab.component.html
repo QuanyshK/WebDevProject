@@ -1,3 +1,24 @@
 <div class="search_bar">
-  <input placeholder="Search for music here" type="text" class="text inputbar">
+    <input  [(ngModel)]="searchQuery" (input)="onSearchChange($event)"  placeholder="Search for music here" type="text" class="text inputbar" >
 </div>
+<div class="list_music" *ngIf="searchQuery.length>0;else:noCur">
+<div  class="sbox"  *ngFor="let asset of filteredMusic"  (click)="changeTrack(asset)">
+    <img class="simage" src = "{{asset.img}}">
+    <span class="text sname">{{asset.name}}</span>
+    <div class="fader fader-left"></div>
+    <div class="fader fader-right"></div> <br>
+    <span class="text mauth">{{asset.author}}</span>
+</div>
+</div>
+
+<ng-template #noCur>
+    <div class="list_music">
+        <div class="sbox" *ngFor="let asset of assets " (click)="changeTrack(asset)">
+            <img class="simage" src = "{{asset.img}}">
+            <span class="text sname">{{asset.name}}</span>
+            <div class="fader fader-left"></div>
+            <div class="fader fader-right"></div> <br>
+            <span class="text mauth">{{asset.author}}</span>
+        </div>
+    </div>
+</ng-template>

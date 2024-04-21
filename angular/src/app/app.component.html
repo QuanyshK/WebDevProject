@@ -15,7 +15,8 @@
     </div>
 
     <a *ngIf="whichTab=='search'" class="tabbox">
-      <app-searchtab></app-searchtab>
+      <app-searchtab [assets]="assets"
+          (sendId)="recieveId($event)"></app-searchtab>
     </a>
 
     <!-- Footer box with music player, etc. -->
