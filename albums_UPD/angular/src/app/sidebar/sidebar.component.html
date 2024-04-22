@@ -1,0 +1,12 @@
+<div class = "selecttab">
+  <button [routerLink]="['/home']"    [ngClass]="{'activebuttonmain': whichTab=='main', 'maintab': whichTab!='main'}" (click)="tomain()" class="maintab">
+
+  </button>
+
+  <button [routerLink]="['/search']"   [ngClass]="{'activebuttonsearch': whichTab=='search', 'searchtab': whichTab!='search'}"  (click)="tosearch()" class="searchtab">
+
+  </button>
+  <button [routerLink]="['/albums']"  [ngClass]="{'activebuttonalbums': whichTab=='albums', 'albumstab': whichTab!='albums'}"  (click)="toalbums()">
+
+  </button>
+</div>

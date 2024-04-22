@@ -1,0 +1,106 @@
+input[type="button"] {
+  border: none;
+  outline:none;
+}
+.selecttab{
+  position: absolute;
+  left: 6px;
+  top: 55px;
+  width: 145px;
+  height: 500px;
+  display: list-item;
+
+}
+
+@keyframes incr{
+  from {width: 49px;}
+  to {width: 110px;}
+}
+
+.activebuttonmain{
+  width: 49px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: none;
+  animation-name: incr;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards ;
+}
+
+
+
+.activebuttonsearch{
+  width: 49px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: none;
+  animation-name: incr;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards ;
+}
+
+.maintab{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  width: 49px;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: none;
+}
+
+.searchtab{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 49px;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: none;
+
+}
+
+.albumstab{
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 49px;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  box-shadow: none;
+
+}
+
+.activebuttonalbums{
+  width: 49px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  height: 49px;
+  background: #93CAF1;
+  border-radius: 10px;
+  margin-bottom: 32px;
+  box-shadow: none;
+  animation-name: incr;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards ;
+}

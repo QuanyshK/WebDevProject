@@ -1,0 +1,46 @@
+ <div *ngIf="expandState==0 || expandState==1" class="subcategory_box">
+   <span class="text subcategory_title">Music for you</span>
+   <span class="text expand" (click)="expand(1)" >{{ showmore_less }}</span>
+ </div>
+
+<div *ngIf="expandState==0 || expandState==1" [ngClass]="mlist_now">
+
+  <div class="mbox" *ngFor="let asset of assets" (click)="changeTrack(asset)">
+    <img class="mimage" src = "{{asset.img}}">
+    <span class="text mname">{{asset.name}}</span>
+    <div class="fader fader-left"></div>
+    <div class="fader fader-right"></div> <br>
+    <span class="text mauth">{{asset.author}}</span>
+  </div>
+</div>
+
+ <div *ngIf="expandState==0 || expandState==2" class="subcategory_box">
+   <span class="text subcategory_title">Listen again</span>
+   <span (click)="expand(2)" class="text expand" >{{ showmore_less }}</span>
+ </div>
+ <div *ngIf="expandState==0 || expandState==2" [ngClass]="mlist_now">
+
+   <div class="mbox" *ngFor="let asset of assets.slice(5,10)" (click)="changeTrack(asset)">
+     <img class="mimage" src = "{{asset.img}}">
+     <span class="text mname">{{asset.name}}</span>
+     <div class="fader fader-left"></div>
+     <div class="fader fader-right"></div> <br>
+     <span class="text mauth">{{asset.author}}</span>
+   </div>
+ </div>
+
+ <div *ngIf="expandState==0 || expandState==3" class="subcategory_box">
+   <span class="text subcategory_title">Your favourites</span>
+   <span (click)="expand(3)" class="text expand">{{ showmore_less }}</span>
+ </div>
+
+ <div *ngIf="expandState==0 || expandState==3" [ngClass]="mlist_now">
+
+   <div class="mbox" *ngFor="let asset of assets.slice(0,6)" (click)="changeTrack(asset)">
+     <img class="mimage" src = "{{asset.img}}">
+     <span class="text mname">{{asset.name}}</span>
+     <div class="fader fader-left"></div>
+     <div class="fader fader-right"></div> <br>
+     <span class="text mauth">{{asset.author}}</span>
+   </div>
+ </div>

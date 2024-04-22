@@ -1,0 +1,13 @@
+<div class="search_bar">
+  <input (keydown.enter)="getQueryText($event)" placeholder="Search for music here" class="text inputbar">
+</div>
+<div class="mlist_box">
+
+  <div class="mbox" *ngFor="let asset of filtered" (click)="changeTrack(asset)">
+    <img class="mimage" src = "{{asset.img}}">
+    <div class="nameNauthorbox">
+    <span class="text mname">{{asset.name}}</span>
+    <span class="text mauth">{{asset.author}}</span>
+    </div>
+  </div>
+</div>

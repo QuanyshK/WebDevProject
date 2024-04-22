@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div class = "mainbox" *ngIf="loaded">
+    <!-- Side tab with main, search, etc. -->
+    <app-sidebar (sender)="receiver($event)"></app-sidebar>
+
+    <!-- Screen for main scene. Changes with clicks on side tab. -->
+    <div *ngIf="whichTab=='main'" class="tabbox">
+      <app-maintab (sendId)="recieveId($event)" [assets]="assets"></app-maintab>
+    </div>
+
+    <a *ngIf="whichTab=='search'" class="tabbox">
+      <app-searchtab [assets]="assets" (sendId)="recieveId($event)"></app-searchtab>
+    </a>
+
+    <a *ngIf="whichTab=='albums'" class="tabbox">
+      <app-albums (sendId)="recieveId($event)" [assets]="assets" [albums]="albums"></app-albums>
+    </a>
+
+    <!-- Footer box with music player, etc. -->
+    <div *ngIf="true">
+      <app-footermbox class="footerbox" [currentId]="curId" [assets]="assets" [childFunction]="searchById"></app-footermbox>
+    </div>
+
+  </div>
+
+</body>
+</html>
