@@ -22,3 +22,8 @@ class albuminfo(generics.ListCreateAPIView):
     serializer_class = AlbumInfoSerializer
     queryset = AlbumInfo.objects.all()
 
+"""""
+class artistinfo(generics.ListCreateAPIView):
+    serializer_class =AuthorSerializer
+    queryset =AuthorInfo.objects.all()
+"""""

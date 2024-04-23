@@ -8,8 +8,8 @@ input[type="button"] {
   top: 55px;
   width: 145px;
   height: 500px;
-  display: list-item;
-
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes incr{

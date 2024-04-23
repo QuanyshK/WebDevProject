@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class = "mainbox" *ngIf="loaded">
     <!-- Side tab with main, search, etc. -->
     <app-sidebar (sender)="receiver($event)"></app-sidebar>
-
+    <div class="sideBarNav">
     <!-- Screen for main scene. Changes with clicks on side tab. -->
     <div *ngIf="whichTab=='main'" class="tabbox">
       <app-maintab (sendId)="recieveId($event)" [assets]="assets"></app-maintab>
@@ -21,6 +22,7 @@
     <a *ngIf="whichTab=='albums'" class="tabbox">
       <app-albums (sendId)="recieveId($event)" [assets]="assets" [albums]="albums"></app-albums>
     </a>
+    </div>
 
     <!-- Footer box with music player, etc. -->
     <div *ngIf="true">

@@ -20,7 +20,7 @@
  </div>
  <div *ngIf="expandState==0 || expandState==2" [ngClass]="mlist_now">
 
-   <div class="mbox" *ngFor="let asset of assets.slice(5,10)" (click)="changeTrack(asset)">
+   <div class="mbox" *ngFor="let asset of lastLisened$ | async " (click)="changeTrack(asset)">
      <img class="mimage" src = "{{asset.img}}">
      <span class="text mname">{{asset.name}}</span>
      <div class="fader fader-left"></div>

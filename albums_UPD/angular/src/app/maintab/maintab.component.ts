@@ -1,8 +1,9 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {NgClass, NgForOf, NgIf} from "@angular/common";
+import {AsyncPipe, NgClass, NgForOf, NgIf} from "@angular/common";
 import {StateService} from "../state.service";
 import {HttpClientModule} from "@angular/common/http";
 import {Songs} from "../models";
+import {BehaviorSubject, Observable} from "rxjs";
 
 @Component({
   selector: 'app-maintab',
@@ -11,7 +12,8 @@ import {Songs} from "../models";
     NgForOf,
     HttpClientModule,
     NgClass,
-    NgIf
+    NgIf,
+    AsyncPipe
   ],
   templateUrl: './maintab.component.html',
   styleUrl: './maintab.component.css'
@@ -19,6 +21,7 @@ import {Songs} from "../models";
 export class MaintabComponent {
   mlist_now = 'mlist_box_nonactive'
   expandState = 0
+  lastLisened$: BehaviorSubject<Songs[]> = new BehaviorSubject<Songs[]>([]);
   @Input() assets: Songs[] = [];
   beginPr! : [0, 0, 5, 2]
   showmore_less = "Show more"
@@ -27,10 +30,13 @@ export class MaintabComponent {
   constructor(private service: StateService) {
   }
 
-  changeTrack(a:any){
+  async changeTrack(a:any){
     let id = a['id']
     this.sendId.emit(id)
     console.log("Track changed to" + id)
+    const currentListened = this.lastLisened$.getValue();
+    const updatedListened = [a,...currentListened];
+    this.lastLisened$.next(updatedListened);
   }
 
   pickTrack(a:any){

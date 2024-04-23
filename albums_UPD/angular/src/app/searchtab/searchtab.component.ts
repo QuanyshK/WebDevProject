@@ -20,6 +20,9 @@ export class SearchtabComponent {
       this.filtered = this.assets
       this.queryText = event.target.value
       this.filtered = this.filtered.filter(song=>song.name.toLowerCase().includes(this.queryText.toLowerCase()))
+        if(this.filtered.length<=0){
+            this.filtered=this.filtered.filter(song =>song.author.toLowerCase().includes(this.queryText.toLowerCase()))
+        }
       console.log(this.queryText)
     }
 

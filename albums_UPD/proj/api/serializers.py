@@ -12,3 +12,10 @@ class AlbumInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = AlbumInfo
         fields = "__all__"
+
+"""""
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=AuthorInfo
+        fields = "__all__"
+"""""

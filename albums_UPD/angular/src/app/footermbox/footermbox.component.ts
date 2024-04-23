@@ -30,7 +30,7 @@ export class FootermboxComponent{
   msaapDisplayTitle = false;
   msaapDisplayPlayList = false;
   msaapPageSizeOptions = [];
-  msaapDisplayVolumeControls = false;
+  msaapDisplayVolumeControls = true;
   msaapDisplayRepeatControls = false;
   msaapDisplayArtist = false;
   msaapDisablePositionSlider = false;
