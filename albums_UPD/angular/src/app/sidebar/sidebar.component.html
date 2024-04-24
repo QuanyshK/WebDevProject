@@ -10,4 +10,7 @@
   <button [routerLink]="['/albums']"  [ngClass]="{'activebuttonalbums': whichTab=='albums', 'albumstab': whichTab!='albums'}"  (click)="toalbums()">
       <i class="fa-solid fa-compact-disc fa-xl"></i>
   </button>
+    <button [routerLink]="['/authors']"  [ngClass]="{'activebuttonauthors': whichTab=='authors', 'authorstab': whichTab!='authors'}"  (click)="toauthors()">
+        <i class="fa-brands fa-napster fa-xl"></i>
+    </button>
 </div>

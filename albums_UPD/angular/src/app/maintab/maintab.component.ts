@@ -30,13 +30,16 @@ export class MaintabComponent {
   constructor(private service: StateService) {
   }
 
-  async changeTrack(a:any){
+  async changeTrack(a:any) {
     let id = a['id']
     this.sendId.emit(id)
     console.log("Track changed to" + id)
     const currentListened = this.lastLisened$.getValue();
-    const updatedListened = [a,...currentListened];
-    this.lastLisened$.next(updatedListened);
+    const isDuplicate = currentListened.some(song => song.id === a.id);
+    if (!isDuplicate) {
+      const updatedListened = [a, ...currentListened];
+      this.lastLisened$.next(updatedListened);
+    }
   }
 
   pickTrack(a:any){

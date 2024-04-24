@@ -44,4 +44,9 @@ export class SidebarComponent {
     this.sender.emit(this.whichTab)
   }
 
+  toauthors(){
+    this.whichTab='authors'
+    this.sender.emit(this.whichTab)
+  }
+
 }

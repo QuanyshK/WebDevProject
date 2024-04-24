@@ -8,7 +8,7 @@ import {SearchtabComponent} from "./searchtab/searchtab.component";
 import {NgxAudioPlayerModule} from "@khajegan/ngx-audio-player";
 import { HttpClientModule } from '@angular/common/http';
 import {DataService} from "./data.service";
-import {Albums, Songs} from "./models";
+import {Albums, Author, Songs} from "./models";
 import {AlbumsComponent} from "./albums/albums.component";
 
 @Component({
@@ -21,6 +21,7 @@ import {AlbumsComponent} from "./albums/albums.component";
 export class AppComponent implements OnInit{
   songlist!: Songs[]
   albums!: Albums[]
+  authors!:Author[]
   newlist : Songs
   loaded=false
     constructor(private dataService:DataService) {
@@ -37,6 +38,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.getSongs()
     this.getAlbums()
+    this.getAuthors()
     console.log(this.songlist)
   }
 
@@ -51,6 +53,12 @@ export class AppComponent implements OnInit{
     this.dataService.getAlbums().subscribe(album=>{
       this.albums= album
     });
+  }
+
+  getAuthors(){
+    this.dataService.getAuthors().subscribe(authorlist=>{
+      this.authors=authorlist
+    })
   }
 
 

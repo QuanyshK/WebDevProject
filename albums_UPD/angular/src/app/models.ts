@@ -17,3 +17,12 @@ export interface Albums{
   'songamount' : number,
   'year':number
 }
+
+export  interface  Author{
+  id : number,
+  'img' : string,
+  'name' : string,
+  'songamount' : number,
+  'albums':Albums[],
+  'listeningCount':number
+}
