@@ -3,14 +3,16 @@ import {Albums, Songs} from "../models";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
+import {StateService} from "../state.service";
+
 @Component({
   selector: 'app-albums',
   standalone: true,
-  imports: [
-    NgForOf,
-    RouterLink,
-    NgIf
-  ],
+    imports: [
+        NgForOf,
+        RouterLink,
+        NgIf,
+    ],
   templateUrl: './albums.component.html',
   styleUrl: './albums.component.css'
 })
@@ -21,6 +23,12 @@ export class AlbumsComponent {
   songlist! : Songs[];
   state = 'list'
   currentAlbum !: Albums;
+
+  changeState(newState:string){
+    this.state=newState
+  }
+
+
   toAlbum(a:any){
     this.currentAlbum = a
     this.state = 'album'

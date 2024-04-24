@@ -1,11 +1,12 @@
 <div *ngIf="state == 'list'" class="total">
     <span class="text subcategory_title">Music for you</span>
-
+<div class="albumsWrapper">
   <div class="mbox" *ngFor="let album of albums" (click)="toAlbum(album)">
     <img class="mimage" src = "{{album.img}}">
     <span class="text mname">{{album.name}}</span>
     <span class="text mauth">{{album.author}}</span>
   </div>
+</div>
 </div>
 
 <div *ngIf="state == 'album'">
@@ -23,6 +24,6 @@
       <div class="songlist_name"> {{song.name}}</div>
       <div class="songlist_auth"> {{song.author}}</div>
     </div>
-
+      <a (click)="changeState('list')"><i class="fa-solid fa-angle-left fa-xl" style="color: #93caf1;"></i></a>
   </div>
 </div>

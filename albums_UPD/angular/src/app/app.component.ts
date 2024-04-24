@@ -10,11 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {DataService} from "./data.service";
 import {Albums, Author, Songs} from "./models";
 import {AlbumsComponent} from "./albums/albums.component";
+import {AuthorComponent} from "./author/author.component";
+import {StateService} from "./state.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SidebarComponent, NgIf, MaintabComponent, FootermboxComponent, SearchtabComponent, RouterLink, NgxAudioPlayerModule, HttpClientModule, AlbumsComponent],
+  imports: [RouterOutlet, SidebarComponent, NgIf, MaintabComponent, FootermboxComponent, SearchtabComponent, RouterLink, NgxAudioPlayerModule, HttpClientModule, AlbumsComponent, AuthorComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -24,7 +26,8 @@ export class AppComponent implements OnInit{
   authors!:Author[]
   newlist : Songs
   loaded=false
-    constructor(private dataService:DataService) {
+  state: string = 'list';
+    constructor(private dataService:DataService,private stateService: StateService) {
     this.newlist = {
       id : 0,
       img : "",

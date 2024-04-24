@@ -9,6 +9,7 @@
 .footerbox {
   display: flex;
   flex-direction: row;
+
 }
 
 .nameauth_ft{

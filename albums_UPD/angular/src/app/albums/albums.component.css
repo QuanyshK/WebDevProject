@@ -1,4 +1,6 @@
-
+a{
+  margin-left: 50px;
+}
 .subcategory_title{
   width: 281px;
   height: 52px;
@@ -9,6 +11,10 @@
 }
 
 .total{
+  display: inline-block;
+  flex-direction: row;
+}
+.albumsWrapper{
   display: flex;
   flex-direction: row;
 }

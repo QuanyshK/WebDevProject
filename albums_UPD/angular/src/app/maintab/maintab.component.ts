@@ -42,10 +42,7 @@ export class MaintabComponent {
     }
   }
 
-  pickTrack(a:any){
-    this.service.currentId = a['id']
-    this.service.gotChanged = true;
-  }
+
 
   toggleClass() {
     this.mlist_now = this.mlist_now === 'mlist_box_nonactive' ? 'mlist_box_active' : 'mlist_box_nonactive';

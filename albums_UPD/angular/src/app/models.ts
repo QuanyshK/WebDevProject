@@ -12,7 +12,7 @@ export interface Albums{
   id : number,
   'img' : string,
   'name' : string,
-  'author':string,
+  'author':number,
   'duration':number,
   'songamount' : number,
   'year':number
@@ -23,6 +23,5 @@ export  interface  Author{
   'img' : string,
   'name' : string,
   'songamount' : number,
-  'albums':Albums[],
   'listeningCount':number
 }

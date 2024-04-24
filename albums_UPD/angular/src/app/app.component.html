@@ -22,10 +22,13 @@
     <a *ngIf="whichTab=='albums'" class="tabbox">
       <app-albums (sendId)="recieveId($event)" [assets]="assets" [albums]="albums"></app-albums>
     </a>
+        <a *ngIf="whichTab=='authors'" class="tabbox">
+            <app-author (sendId)="recieveId($event)" [assets]="assets" [albums]="albums" [authors]="authors"></app-author>
+        </a>
     </div>
 
     <!-- Footer box with music player, etc. -->
-    <div *ngIf="true">
+    <div *ngIf="true" class="footer_player">
       <app-footermbox class="footerbox" [currentId]="curId" [assets]="assets" [childFunction]="searchById"></app-footermbox>
     </div>
 

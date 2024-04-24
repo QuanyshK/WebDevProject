@@ -34,6 +34,9 @@ body{
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
 }
+.footer_player{
+  width: 100%;
+}
 
 .mainbox{
   display: flex;

@@ -1,6 +1,6 @@
 <div *ngIf="state == 'list'" class="total">
     <span class="text subcategory_title">Music for you</span>
-
+<div class="authorListWrapper">
     <div class="mbox" *ngFor="let author of authors" (click)="toAutors(author)">
         <img class="mimage" src = "{{author.img}}">
         <span class="text mname">{{author.name}}</span>
@@ -8,22 +8,40 @@
         <span class="text mauth">{{author.listeningCount}}</span>
     </div>
 </div>
+</div>
+<div *ngIf="state == 'author'">
+    <div  class="albumHeader">
+        <img src = "{{currentAuthor.img}}" class="albImg">
+        <div class="info">
+            <div class="text albumName">{{currentAuthor.name}}</div>
+            <div class="text details">{{getDetailsAuthor(currentAuthor)}}</div>
+        </div>
+    </div>
+    <div class="songlist">
+        <div class="text albumSongs" *ngFor="let album of getAllAlbums(currentAuthor.id)" (click)="toAlbum(album)">
+            <img class="songlist_img" src="{{album.img}}" >
+            <div class="songlist_name"> {{album.name}}</div>
+            <div class="songlist_auth"> {{album.author}}</div>
+        </div>
+    </div>
+    <a  (click)="changeState('list')"><i class="fa-solid fa-angle-left fa-xl" style="color: #93caf1;"></i></a>
+</div>
 
-<div *ngIf="state == 'album'">
+<div class="songlist" *ngIf="state == 'album'">
     <div  class="albumHeader">
         <img src = "{{currentAlbum.img}}" class="albImg">
         <div class="info">
             <div class="text albumName">{{currentAlbum.name}}</div>
-            <div class="text authorName">{{currentAlbum.author}}</div>
-            <div class="text details">{{getDetails(currentAlbum)}}</div>
+            <div class="text details">{{getDetailsAlbum(currentAlbum)}}</div>
         </div>
     </div>
-    <div class="songlist">
-        <div class="text albumSongs" *ngFor="let song of getAllSongs(currentAlbum.id)" (click)="changeTrack(song)">
-            <img class="songlist_img" src="{{song.img}}" >
-            <div class="songlist_name"> {{song.name}}</div>
-            <div class="songlist_auth"> {{song.author}}</div>
-        </div>
-
+    <div class="text albumSongs" *ngFor="let song of getAllSongs(currentAuthor.id)" (click)="changeTrack(song)">
+        <img class="songlist_img" src="{{song.img}}" >
+        <div class="songlist_name"> {{song.name}}</div>
+        <div class="songlist_auth"> {{this.currentAuthor.name}}</div>
     </div>
+    <a (click)="changeState('author')"><i class="fa-solid fa-angle-left fa-xl" style="color: #93caf1;"></i></a>
 </div>
+
+
+

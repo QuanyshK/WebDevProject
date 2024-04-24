@@ -1,4 +1,6 @@
-
+a{
+    margin-left: 50px;
+}
 .subcategory_title{
     width: 281px;
     height: 52px;
@@ -9,10 +11,13 @@
 }
 
 .total{
+    display: inline-block;
+    flex-direction: row;
+}
+.authorListWrapper{
     display: flex;
     flex-direction: row;
 }
-
 .mbox{
     display: flex;
     flex: 0 0 auto; /* This prevents shrinking and growing */
