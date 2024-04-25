@@ -1,0 +1,18 @@
+<button class="userButton" (click)="toLogin= true"></button>
+<button class="logoutButton" (click)="logout()"></button>
+
+<button class="playlistsButton" *ngIf="toLogin"></button>
+
+<div class="inpbox" *ngIf="toLogin">
+<input [(ngModel)]="registername" placeholder="name" />
+<input [(ngModel)]="registermail" placeholder="mail" />
+<input [(ngModel)]="registerpassword" placeholder="password" />
+<button (click)="registerButton()"> Submit </button>
+
+<input [(ngModel)]="loginmail" placeholder="mail" />
+<input [(ngModel)]="loginpassword" placeholder="password" />
+<button (click)="loginButton()"> Submit </button>
+
+</div>
+
+

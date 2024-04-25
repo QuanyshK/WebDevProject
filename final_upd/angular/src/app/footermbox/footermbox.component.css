@@ -1,0 +1,150 @@
+.imgbox{
+  margin-left: 12px;
+  margin-top: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+.footerbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.nameauth_ft{
+  margin-left: 14px;
+  margin-top: 23px;
+}
+
+.mname_ft{
+  color: #FFFFFF;
+  line-height: 9px;
+  font-size: 17.5px;
+  font-weight: 300;
+}
+
+.mauth_ft{
+  line-height: 9px;
+  font-weight: 500;
+  font-size: 14.3px;
+  color: #8A8A8A;
+}
+
+.playbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 13px;
+  margin-left: 65.5px;
+  width: 600px;
+  height: 68px;
+  color: #FFFFFF;
+}
+
+.button_ft{
+  width: 38px;
+  height: 38px;
+  background-color: #78B6E2;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 9px;
+}
+
+.progressbar{
+  margin-top: 12px;
+  width: 550px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #989898;
+}
+
+.mat-mdc-focus-indicator{
+  color: #1E245A;
+}
+
+.player{
+  margin-top: -5px;
+  border-radius: 3px;
+  font-family: 'Inter';
+  font-style: normal;
+  color: #FFFFFF;
+}
+.ngxAudioPlayer button {
+  background-color: #007bff;
+  color: #ff0000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.footerbox{
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+:host::ng-deep .ngx-d-flex{
+  width: 600px;
+}
+
+:host::ng-deep .mdc-slider__track--active{
+  background-color: #989898;
+  height: 8px;
+  border-radius: 6px;
+}
+
+:host::ng-deep .play-pause{
+  padding: 0 0 0 0;
+  height: 40px;
+  width: 40px;
+  min-width: 40px;
+  border-radius: 6px;
+  background-color: #78B6E2;
+  border-color: #78B6E2;
+}
+
+:host::ng-deep .play-track{
+  padding-left:5px ;
+}
+
+:host::ng-deep .pause-track{
+  width: 70%;
+}
+
+:host::ng-deep .play-track svg{
+  width: 120%;
+  padding-left:-4px ;
+}
+
+:host::ng-deep .mdc-slider__track div{
+  border-radius: 3px;
+}
+
+:host::ng-deep .skip-next{
+  width: 40px;
+  height: 40px;
+}
+
+:host::ng-deep .mdc-button{
+  width: 40px;
+  height: 40px;
+}
+
+:host::ng-deep .mat-mdc-card{
+  flex-direction: row;
+}
+
+:host::ng-deep .mdc-slider__thumb .mdc-slider__thumb-knob{
+  border-radius: 4px;
+}
+
+:host::ng-deep .mat-mdc-slider .mdc-slider__thumb{
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  left: 0px;
+  top: 20.5px;
+}
+

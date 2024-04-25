@@ -1,0 +1,16 @@
+.userButton{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 600px;
+  left: 20px;
+}
+
+.playlistsButton{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 500px;
+  left: 20px;
+  background-color: #78B6E2;
+}

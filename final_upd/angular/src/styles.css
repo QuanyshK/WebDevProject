@@ -1,0 +1,33 @@
+.text{
+  font-family: 'Inter';
+  font-style: normal;
+}
+
+.userButton{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 600px;
+  left: 20px;
+  background-color: red;
+  border-radius: 9px;
+}
+
+.logoutButton{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 300px;
+  left: 20px;
+  background-color: red;
+}
+
+
+.playlistsButton{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 500px;
+  left: 20px;
+  background-color: #78B6E2;
+}

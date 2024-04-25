@@ -1,0 +1,32 @@
+<div *ngIf="state == 'list'" class="total">
+    <span class="text subcategory_title">Music for you</span>
+<div class="boxes">
+  <div class="mbox" *ngFor="let album of albums" (click)="toAlbum(album)">
+    <img class="mimage" src = "{{album.img}}">
+    <span class="text mname">{{album.name}}</span>
+    <span class="text mauth">{{album.author}}</span>
+  </div>
+</div>
+</div>
+
+<div  *ngIf="state == 'album'">
+  <div class="butn">
+  <img class="albumBack" (click)="goback()" src="https://iconape.com/wp-content/files/wp/367363/svg/ios-arrow-back-logo-icon-png-svg.png" alt="">
+  </div>
+<div  class="albumHeader">
+  <img src = "{{currentAlbum.img}}" class="albImg">
+    <div class="info">
+      <div class="text albumName">{{currentAlbum.name}}</div>
+      <div class="text authorName">{{currentAlbum.author}}</div>
+      <div class="text details">{{getDetails(currentAlbum)}}</div>
+  </div>
+  </div>
+  <div class="songlist">
+    <div class="text albumSongs" *ngFor="let song of getAllSongs(currentAlbum.id)" (click)="changeTrack(song)">
+      <img class="songlist_img" src="{{song.img}}" >
+      <div class="songlist_name"> {{song.name}}</div>
+      <div class="songlist_auth"> {{song.author}}</div>
+    </div>
+
+  </div>
+</div>
